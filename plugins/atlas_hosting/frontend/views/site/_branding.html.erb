@@ -1,0 +1,9 @@
+<% if ASConstants.VERSION.start_with?("v3") %>
+  <div class="container-fluid navbar-branding">
+    <%= image_tag "/assets/images/atlas.png", :class=>"img-responsive" %>
+  </div>
+<% else %>
+  <div class="navbar-branding flex-grow-1 align-self-stretch order-1 order-md-0 p-12px">
+    <%= image_tag "/assets/images/atlas.png", :class =>"header-logo", :alt => "'ArchivesSpace - Powered by Atlas Systems"  %>
+  </div>
+<% end %>

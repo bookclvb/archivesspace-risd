@@ -1,0 +1,64 @@
+<%
+title = I18n.t('plugins.custom_locales.title')
+set_title(title)
+%>
+
+<h3><%= I18n.t('plugins.custom_locales.title') %></h3>
+<p>
+  See <a href="https://archivesspace.github.io/tech-docs/customization/locales.html" target="_blank" rel="noopener noreferrer">Customizing text in ArchivesSpace</a> for more information.
+</p>
+
+<p>
+  <div>
+    <h4>Locales</h4>
+    <span>The top most "<%= AppConfig[:locale] =%>.yml" file</span>
+  </div>
+  <% if (@locales_combined_exists || @locales_modified_exists) then %>
+    <% if (@locales_combined_exists) then %>
+      <div>
+        <%= link_to 'Combined', 'custom_locales?file=combined_locales', id: 'download-combined-locales' %>
+      </div>
+    <% end %>
+
+    <% if (@locales_modified_exists) then %>
+      <div>
+        <%= link_to 'Modified', 'custom_locales?file=modified_locales', id: 'download-modified-locales' %>
+      </div>
+    <% end %>
+  <% else %>
+    No custom files
+  <% end %>
+</p>
+
+<p>
+  <div>
+    <h4>Enums</h4>
+    <span>The dynamic enumerations "enums/<%= AppConfig[:locale] =%>.yml" file</span>
+  </div>
+  <% if (@enums_combined_exists || @enums_modified_exists) then %>
+    <% if (@enums_combined_exists) then %>
+      <div>
+        <%= link_to 'Combined', 'custom_locales?file=combined_enums', id: 'download-combined-enums' %>
+      </div>
+    <% end %>
+
+    <% if (@enums_modified_exists) then %>
+      <div>
+        <%= link_to 'Modified', 'custom_locales?file=modified_enums', id: 'download-modified-enums' %>
+      </div>
+    <% end %>
+  <% else %>
+    No custom files
+  <% end %>
+</p>
+
+<% if (@debug_enabled) then %>
+  <p>
+    <div>
+      <h4>Debug</h4>
+    </div>
+    <div>
+      <%= link_to 'All', 'custom_locales?file=all', id: 'download-all' %>
+    </div>
+  </p>
+<% end %>

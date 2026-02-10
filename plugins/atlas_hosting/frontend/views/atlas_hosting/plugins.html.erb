@@ -1,0 +1,25 @@
+<%
+title = "#{I18n.t("plugins.atlas_hosting.title")} - #{I18n.t("plugins.atlas_hosting.plugins.title")}"
+set_title(title)
+%>
+
+<h3><%= I18n.t("plugins.atlas_hosting.plugins.label") %></h3>
+
+<p>
+<% if (@plugins.length == 0) then %>
+    <p>No plugins enabled</p>
+<% else %>
+    <div>
+        <p><%= I18n.t("plugins.atlas_hosting.plugins.order_info") %></p>
+        <% @plugins.each do |plugin| %>
+            <div><%= link_to "#{plugin}", "plugins/download?name=#{plugin}" %></div>
+        <% end %>
+    </div>
+<% end %>
+</p>
+
+<hr />
+
+<p>
+  <%= link_to I18n.t("plugins.atlas_hosting.plugins.download_all"), 'plugins/download' %>
+</p>

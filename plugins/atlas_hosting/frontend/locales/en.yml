@@ -1,0 +1,10 @@
+en:
+  plugins:
+    atlas_hosting:
+      title: Atlas Hosting
+      label: Atlas Hosting
+      plugins:
+        title: Download Plugins
+        label: Download Plugins
+        download_all: Download All
+        order_info: Plugins are listed in the order in which they are configured

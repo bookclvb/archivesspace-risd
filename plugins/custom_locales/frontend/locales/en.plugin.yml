@@ -1,0 +1,5 @@
+en:
+  plugins:
+    custom_locales:
+      title: Atlas Custom Text
+      label: Atlas Custom Text

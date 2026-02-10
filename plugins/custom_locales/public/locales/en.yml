@@ -1,0 +1,32 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  brand:
+    title: RISD Archives Collections
+    title_link_text: Return to the homepage
+    welcome_head: Welcome to RISD Archives
+    welcome_message:
+      <p>RISD’s Archives collects, preserves and provides access to records and artifacts, including photographs and publications that document the history and development of RISD programs, policies and procedures and contributions of individuals and organizations associated with the School and Museum. Records in the Archives date from RISD’s founding in 1877 to the present.</p><p>If you are new to archival research or the RISD Archives, you may find our <a href="https://risd.libguides.com/archives/welcome">RISD Archives guide</a> helpful. If you are having trouble finding the material you're looking for, please contact an archivist at <a href="mailto:risdarchives@risd.edu">risdarchives@risd.edu</a>. We are able to search unprocessed material that has not been made public on this site.</p>
+    welcome_page_title: RISD Archives Collections
+
+  actions:
+    search_header: Search collections in the RISD Archives

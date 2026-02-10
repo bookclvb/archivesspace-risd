@@ -1,0 +1,19 @@
+<%
+title = I18n.t("plugins.atlas_hosting.title")
+set_title(title)
+%>
+
+<% if user_can?('administer_system') %>
+    <div>
+        <h4><%= link_to I18n.t("plugins.atlas_hosting.plugins.title"), 'atlas_hosting/plugins' %></h4>
+        <hr />
+    </div>
+<% end %>
+
+<div id="atlas-info-frame"></div>
+
+<!-- http://blog.apps.npr.org/pym.js/ -->
+<script src="https://pym.nprapps.org/pym.v1.min.js" type="text/javascript"></script>
+<script>
+    var pymParent = new pym.Parent('atlas-info-frame', '<%= "#{@atlas_hosting_info_url}" %>', {});
+</script>
