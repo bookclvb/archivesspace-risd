@@ -25,6 +25,9 @@ Various files then must be created to point to this:
 
 
 Not bothering to change the favicon right now. 
+How to change items in config-defaults.rb without editing it directly?
+- `AppConfig[:pui_branding_img_alt_text] = 'ArchivesSpace - a community served by Lyrasis.'`
+
 
 
 

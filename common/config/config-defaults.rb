@@ -92,7 +92,7 @@ AppConfig[:solr_verify_checksums] = true
 AppConfig[:locale] = :en
 
 # Plug-ins to load. They will load in the order specified
-AppConfig[:plugins] = ['local', 'lcnaf']
+AppConfig[:plugins] = ["custom_locales", "risd_branding", "atlas_hosting", "local", "lcnaf", "aspace-oauth", "aeon_fulfillment", "user_defined_in_basic"]
 
 # The number of concurrent threads available to run background jobs
 # Resist the urge to set this to a big number as it will affect performance
@@ -479,7 +479,7 @@ AppConfig[:record_inheritance_resolves] = [
 # TODO: Clean up configuration options
 
 AppConfig[:pui_search_results_page_size] = 10
-AppConfig[:pui_branding_img] = 'ArchivesSpaceLogo.svg'
+AppConfig[:pui_branding_img] = '/assets/images/RISD_PUI.png'
 AppConfig[:pui_branding_img_alt_text] = 'ArchivesSpace - a community served by Lyrasis.'
 AppConfig[:pui_show_favicon] = true # whether or not to show a favicon
 
