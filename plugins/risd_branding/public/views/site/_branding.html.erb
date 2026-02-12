@@ -1,3 +1,12 @@
 
 <%# I'm not sure what this file controls. %>
 
+<% if ASConstants.VERSION.start_with?("v4") %>
+  <div class="container-fluid navbar-branding">
+    <%= image_tag "/assets/images/RISD_PUI.png", :class=>"img-responsive" %>
+  </div>
+<% else %>
+  <div class="navbar-branding flex-grow-1 align-self-stretch order-1 order-md-0 p-12px">
+    <%= image_tag "/assets/images/RISD_PUI.png", :class =>"header-logo", :alt => "Fleet Library at RISD"  %>
+  </div>
+<% end %>
